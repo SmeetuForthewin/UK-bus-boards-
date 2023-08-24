@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1826c8b618f93ee58be4f7c1f593186b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1826c8b618f93ee58be4f7c1f593186b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1826c8b618f93ee58be4f7c1f593186b = L.map(
+                "map_1826c8b618f93ee58be4f7c1f593186b",
+                {
+                    center: [52.0, -1.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_8f60cbabe1782cd50efd6835f55d397d = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_58e0305620518ceb5d4531b8b510b743 = L.marker(
+                [53.600197, -1.031217],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_58e0305620518ceb5d4531b8b510b743.bindTooltip(
+                `<div>
+                     Stop 1<br>Field Road/Princess Avenue<br>Arrival: 09:42:00<br>Departure: 09:42:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d43fb0419f36e93cd86e4388c5cf6b0d = L.marker(
+                [53.597515, -1.029949],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_d43fb0419f36e93cd86e4388c5cf6b0d.bindTooltip(
+                `<div>
+                     Stop 2<br>Princess Avenue/Junction Road<br>Arrival: 09:42:35<br>Departure: 09:42:35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bb54dd40c6d4b70442b430dc7994e2b8 = L.polyline(
+                [[53.600197, -1.031217], [53.597515, -1.029949]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_688e5a22d2dddb787bde8f4080e40cf3 = L.marker(
+                [53.596485, -1.024684],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_688e5a22d2dddb787bde8f4080e40cf3.bindTooltip(
+                `<div>
+                     Stop 3<br>East Lane/Coronation Road<br>Arrival: 09:43:17<br>Departure: 09:43:17
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_cf412330a7506709ff8b4bb57cce3ecc = L.polyline(
+                [[53.597515, -1.029949], [53.596485, -1.024684]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_37445c1feb9b79af9bcbed186fe17092 = L.marker(
+                [53.592976, -1.025233],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_37445c1feb9b79af9bcbed186fe17092.bindTooltip(
+                `<div>
+                     Stop 4<br>Emerson Avenue/East Lane<br>Arrival: 09:44:02<br>Departure: 09:44:02
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_97e240a3053bc3159752828c8eb9380d = L.polyline(
+                [[53.596485, -1.024684], [53.592976, -1.025233]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_04090b679b5f39f5fe3d6accb65033a8 = L.marker(
+                [53.592087, -1.02684],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_04090b679b5f39f5fe3d6accb65033a8.bindTooltip(
+                `<div>
+                     Stop 5<br>Emerson Avenue/Thomas Road<br>Arrival: 09:44:19<br>Departure: 09:44:19
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6e61d84dc1882f64ebd95e8182625d58 = L.polyline(
+                [[53.592976, -1.025233], [53.592087, -1.02684]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_0e2f8f0fb1eb79f9e7462779043cb923 = L.marker(
+                [53.590157, -1.027912],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_0e2f8f0fb1eb79f9e7462779043cb923.bindTooltip(
+                `<div>
+                     Stop 6<br>Station Road/East Lane<br>Arrival: 09:44:44<br>Departure: 09:44:44
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_97e91c7704b3ada6f0708d80329e84c1 = L.polyline(
+                [[53.592087, -1.02684], [53.590157, -1.027912]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_19d090fe5ee52b625c7d3e9204b97002 = L.marker(
+                [53.585785, -1.024598],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_19d090fe5ee52b625c7d3e9204b97002.bindTooltip(
+                `<div>
+                     Stop 7<br>Station Road/The Oval<br>Arrival: 09:45:45<br>Departure: 09:45:45
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7e3bc53aee2d554757d5354aa0d9cb73 = L.polyline(
+                [[53.590157, -1.027912], [53.585785, -1.024598]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_0520d12db76f177230e38403f7c7ae85 = L.marker(
+                [53.584866, -1.021658],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_0520d12db76f177230e38403f7c7ae85.bindTooltip(
+                `<div>
+                     Stop 8<br>Station Road/The Crescent<br>Arrival: 09:46:10<br>Departure: 09:46:10
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_4036520004c9617e791b28e4fbd8685a = L.polyline(
+                [[53.585785, -1.024598], [53.584866, -1.021658]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_34a3099d98d0c02bf703eb4b9cd449cf = L.marker(
+                [53.583492, -1.017596],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_34a3099d98d0c02bf703eb4b9cd449cf.bindTooltip(
+                `<div>
+                     Stop 9<br>Station Road/Cherry Tree Drive<br>Arrival: 09:46:46<br>Departure: 09:46:46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a11f26919f17376fdb1327c94d46191d = L.polyline(
+                [[53.584866, -1.021658], [53.583492, -1.017596]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_56efc76bf829b2c6a6dfe8d3c8b0333e = L.marker(
+                [53.58223, -1.012973],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_56efc76bf829b2c6a6dfe8d3c8b0333e.bindTooltip(
+                `<div>
+                     Stop 10<br>Station Road/Bootham Lane<br>Arrival: 09:47:24<br>Departure: 09:47:24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_8e24234f37235745cf290ecc232996ed = L.polyline(
+                [[53.583492, -1.017596], [53.58223, -1.012973]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_2d8c7a22eb50bcc83f5c0a4cf82e7d7a = L.marker(
+                [53.581173, -1.009977],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_2d8c7a22eb50bcc83f5c0a4cf82e7d7a.bindTooltip(
+                `<div>
+                     Stop 11<br>Station Road/Pudding and Dip Lane<br>Arrival: 09:47:50<br>Departure: 09:47:50
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f44246bbc1bb92c9b65117abb4f96bea = L.polyline(
+                [[53.58223, -1.012973], [53.581173, -1.009977]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_a691505e2e55bd6a8b0e52c378518bf2 = L.marker(
+                [53.580177, -1.006058],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_a691505e2e55bd6a8b0e52c378518bf2.bindTooltip(
+                `<div>
+                     Stop 12<br>Station Road/Hund Oak Drive<br>Arrival: 09:48:23<br>Departure: 09:48:23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_dffbdaea070e501b79823aed8f0f9563 = L.polyline(
+                [[53.581173, -1.009977], [53.580177, -1.006058]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_a20f6dda9b8cc3b8739c19e0d6bf2bda = L.marker(
+                [53.579132, -1.001431],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_a20f6dda9b8cc3b8739c19e0d6bf2bda.bindTooltip(
+                `<div>
+                     Stop 13<br>Station Road/Cuckoo Lane<br>Arrival: 09:49:00<br>Departure: 09:49:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ab40f5ff8c7f63721e1e38b947d53d52 = L.polyline(
+                [[53.580177, -1.006058], [53.579132, -1.001431]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_476fb04f6b25b402bdf8d246c306a283 = L.marker(
+                [53.575752, -1.001209],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_476fb04f6b25b402bdf8d246c306a283.bindTooltip(
+                `<div>
+                     Stop 14<br>Manor Road/Carr Side Lane<br>Arrival: 09:51:00<br>Departure: 09:51:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f349f1c593dffc06c6020b0913947728 = L.polyline(
+                [[53.579132, -1.001431], [53.575752, -1.001209]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_451489df2580decca1328db5de5d5d5a = L.marker(
+                [53.574215, -1.004748],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_451489df2580decca1328db5de5d5d5a.bindTooltip(
+                `<div>
+                     Stop 15<br>Manor Road/Parkways<br>Arrival: 09:52:00<br>Departure: 09:52:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_466cab49bb3c30069603cefc6c7f30ac = L.polyline(
+                [[53.575752, -1.001209], [53.574215, -1.004748]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_8bda1dd4e8c0c1ff4ef4ee8a05790c22 = L.marker(
+                [53.571445, -1.008559],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_8bda1dd4e8c0c1ff4ef4ee8a05790c22.bindTooltip(
+                `<div>
+                     Stop 16<br>Doncaster Road/Danum Road<br>Arrival: 09:53:00<br>Departure: 09:53:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b27529fc28da0d2c29f6e1b636e79fbb = L.polyline(
+                [[53.574215, -1.004748], [53.571445, -1.008559]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_8dde6d082256112a28835a923344071d = L.marker(
+                [53.569191, -1.01219],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_8dde6d082256112a28835a923344071d.bindTooltip(
+                `<div>
+                     Stop 17<br>Doncaster Road/Coppice Avenue<br>Arrival: 09:54:00<br>Departure: 09:54:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_4a8e1f5a9c9f40cd44776c673995bb55 = L.polyline(
+                [[53.571445, -1.008559], [53.569191, -1.01219]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_416bebd0b1b38335a37b431285c0af74 = L.marker(
+                [53.566742, -1.016233],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_416bebd0b1b38335a37b431285c0af74.bindTooltip(
+                `<div>
+                     Stop 18<br>Doncaster Road/Mile End Avenue<br>Arrival: 09:55:00<br>Departure: 09:55:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_25612746e91f620cdba6996b02a3c51d = L.polyline(
+                [[53.569191, -1.01219], [53.566742, -1.016233]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_dff6320e65e07fbdb32b5b2d1bfa0716 = L.marker(
+                [53.564884, -1.019689],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_dff6320e65e07fbdb32b5b2d1bfa0716.bindTooltip(
+                `<div>
+                     Stop 19<br>High Street/Woodhouse Lane<br>Arrival: 09:56:00<br>Departure: 09:56:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_bee4fe1486c43ec4b370dccee1f2a3d5 = L.polyline(
+                [[53.566742, -1.016233], [53.564884, -1.019689]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_b82e236e79f11cfb2bb75716504f4616 = L.marker(
+                [53.562363, -1.026798],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_b82e236e79f11cfb2bb75716504f4616.bindTooltip(
+                `<div>
+                     Stop 20<br>High Street/St Marys Road<br>Arrival: 09:56:49<br>Departure: 09:56:49
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_c1a662ce303d6188b73bd1acb346ef44 = L.polyline(
+                [[53.564884, -1.019689], [53.562363, -1.026798]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_af8cd8666e4c9ec1549aa53f0a571c75 = L.marker(
+                [53.5616, -1.03145],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_af8cd8666e4c9ec1549aa53f0a571c75.bindTooltip(
+                `<div>
+                     Stop 21<br>High Street/Westminster Drive<br>Arrival: 09:57:17<br>Departure: 09:57:17
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e25b3ac2f14d33c23d1247a047728fbe = L.polyline(
+                [[53.562363, -1.026798], [53.5616, -1.03145]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_c78053b287a9b6acb1ed6834f8bf8091 = L.marker(
+                [53.560238, -1.036373],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_c78053b287a9b6acb1ed6834f8bf8091.bindTooltip(
+                `<div>
+                     Stop 22<br>High Street/Green Lane Farm<br>Arrival: 09:57:49<br>Departure: 09:57:49
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_acb8ab1b26c548a02c7114926137dd45 = L.polyline(
+                [[53.5616, -1.03145], [53.560238, -1.036373]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_8398eee1edc91ad0dca08838b3011ef2 = L.marker(
+                [53.557468, -1.045025],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_8398eee1edc91ad0dca08838b3011ef2.bindTooltip(
+                `<div>
+                     Stop 23<br>Thorne Road/Hatfield Lane<br>Arrival: 09:58:47<br>Departure: 09:58:47
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_badc9364c6790dfb4b04126dbf3f8ccc = L.polyline(
+                [[53.560238, -1.036373], [53.557468, -1.045025]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_c4f527d3b3de5c29ffbb7a6c01b753d5 = L.marker(
+                [53.556644, -1.048923],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_c4f527d3b3de5c29ffbb7a6c01b753d5.bindTooltip(
+                `<div>
+                     Stop 24<br>Thorne Road/Sandall Grange<br>Arrival: 09:59:12<br>Departure: 09:59:12
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_64991f5dc3ed694fd5e5a481d332e1ab = L.polyline(
+                [[53.557468, -1.045025], [53.556644, -1.048923]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_5098126b25a4e71de1550906b80b3f4b = L.marker(
+                [53.554241, -1.062457],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_5098126b25a4e71de1550906b80b3f4b.bindTooltip(
+                `<div>
+                     Stop 25<br>Thorne Road/Eden Field Road<br>Arrival: 10:00:35<br>Departure: 10:00:35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_d8e385396a436ee65c20db4a5276cca1 = L.polyline(
+                [[53.556644, -1.048923], [53.554241, -1.062457]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_ea8a0739ed3fa9d7f73dbdce858b311c = L.marker(
+                [53.553249, -1.066328],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_ea8a0739ed3fa9d7f73dbdce858b311c.bindTooltip(
+                `<div>
+                     Stop 26<br>Thorne Road/Cedric Road<br>Arrival: 10:01:00<br>Departure: 10:01:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_ba9e5ad332149a71c6b896278580f0b2 = L.polyline(
+                [[53.554241, -1.062457], [53.553249, -1.066328]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_579e18401be681573e2dbe3dfd3f9e48 = L.marker(
+                [53.550877, -1.072267],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_579e18401be681573e2dbe3dfd3f9e48.bindTooltip(
+                `<div>
+                     Stop 27<br>Thorne Road/Hungerhill Lane<br>Arrival: 10:02:04<br>Departure: 10:02:04
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_7459e20b97ec0e7564b08c4cbcf03e2d = L.polyline(
+                [[53.553249, -1.066328], [53.550877, -1.072267]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_64c469d4b17c684059f2eafc9493f76c = L.marker(
+                [53.548367, -1.076653],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_64c469d4b17c684059f2eafc9493f76c.bindTooltip(
+                `<div>
+                     Stop 28<br>Thorne Road/Lyndale Avenue<br>Arrival: 10:02:59<br>Departure: 10:02:59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b2e07369d475cd825523b03df1f04748 = L.polyline(
+                [[53.550877, -1.072267], [53.548367, -1.076653]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_39e50c40412ac46c7d78d9d13860c361 = L.marker(
+                [53.546482, -1.080814],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_39e50c40412ac46c7d78d9d13860c361.bindTooltip(
+                `<div>
+                     Stop 29<br>Thorne Road/Ogden Road<br>Arrival: 10:03:46<br>Departure: 10:03:46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b044c6d15a63f733d0ae400921bcff25 = L.polyline(
+                [[53.548367, -1.076653], [53.546482, -1.080814]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_e4c3a201adaa8cf6bc41ae58bea78a09 = L.marker(
+                [53.545265, -1.083557],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_e4c3a201adaa8cf6bc41ae58bea78a09.bindTooltip(
+                `<div>
+                     Stop 30<br>Thorne Road/Ogden Road<br>Arrival: 10:04:17<br>Departure: 10:04:17
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_0ec04ab80e5593f87a2caffd31366f35 = L.polyline(
+                [[53.546482, -1.080814], [53.545265, -1.083557]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_8cd183aa4654cb2cd154e759b28d77bc = L.marker(
+                [53.543369, -1.088668],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_8cd183aa4654cb2cd154e759b28d77bc.bindTooltip(
+                `<div>
+                     Stop 31<br>Thorne Road/Sandalwood Close<br>Arrival: 10:05:11<br>Departure: 10:05:11
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_42075cf030889250c462e0eb33441f04 = L.polyline(
+                [[53.545265, -1.083557], [53.543369, -1.088668]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_f4209cf0dc90f78b4933e20ca16027cd = L.marker(
+                [53.542767, -1.090854],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_f4209cf0dc90f78b4933e20ca16027cd.bindTooltip(
+                `<div>
+                     Stop 32<br>Thorne Road/Sandall Park Drive<br>Arrival: 10:05:33<br>Departure: 10:05:33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_e6555f20a7f4da07545c97b3c1ef0d90 = L.polyline(
+                [[53.543369, -1.088668], [53.542767, -1.090854]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_df53ba25eb636f5a95d3b476197f1b11 = L.marker(
+                [53.541084, -1.096382],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_df53ba25eb636f5a95d3b476197f1b11.bindTooltip(
+                `<div>
+                     Stop 33<br>Thorne Road/Chestnut Avenue<br>Arrival: 10:06:29<br>Departure: 10:06:29
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_9e04d599e479791d4f4989112c75a269 = L.polyline(
+                [[53.542767, -1.090854], [53.541084, -1.096382]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_06b0ffed9f07c01fd711390cdf6c7a58 = L.marker(
+                [53.539501, -1.099811],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_06b0ffed9f07c01fd711390cdf6c7a58.bindTooltip(
+                `<div>
+                     Stop 34<br>Thorne Road/Crossways<br>Arrival: 10:07:08<br>Departure: 10:07:08
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_f365733de2dfe4651373d8a7c00720ff = L.polyline(
+                [[53.541084, -1.096382], [53.539501, -1.099811]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_4c413d42ce6ad0055636f55e670b1ac2 = L.marker(
+                [53.537819, -1.102246],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_4c413d42ce6ad0055636f55e670b1ac2.bindTooltip(
+                `<div>
+                     Stop 35<br>Thorne Road/Thornhill Avenue<br>Arrival: 10:07:41<br>Departure: 10:07:41
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_6bd9f3d48a42c43ccc32ada1fd12a649 = L.polyline(
+                [[53.539501, -1.099811], [53.537819, -1.102246]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_d3e1ef3865490075dfd1e952be6bad96 = L.marker(
+                [53.534882, -1.105899],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_d3e1ef3865490075dfd1e952be6bad96.bindTooltip(
+                `<div>
+                     Stop 36<br>Thorne Road/Hillcrest Road<br>Arrival: 10:08:36<br>Departure: 10:08:36
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_73fe6a9d5c9141266b42a6faec373c1a = L.polyline(
+                [[53.537819, -1.102246], [53.534882, -1.105899]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_f37163b1324ff882671d6db5b4412954 = L.marker(
+                [53.533806, -1.107611],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_f37163b1324ff882671d6db5b4412954.bindTooltip(
+                `<div>
+                     Stop 37<br>Thorne Road/Armthorpe Lane<br>Arrival: 10:08:59<br>Departure: 10:08:59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_a34a22b6aed55530e592e8ba7cceaf52 = L.polyline(
+                [[53.534882, -1.105899], [53.533806, -1.107611]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_0f5c007a97748789c7eb23dbd3064e0c = L.marker(
+                [53.531147, -1.112736],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_0f5c007a97748789c7eb23dbd3064e0c.bindTooltip(
+                `<div>
+                     Stop 38<br>Thorne Road/Zetland Road<br>Arrival: 10:10:00<br>Departure: 10:10:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_4dac8e8922f7b2a2a378228f7f238546 = L.polyline(
+                [[53.533806, -1.107611], [53.531147, -1.112736]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_1e6f025c45c91d97ac2cae2b0f47ad59 = L.marker(
+                [53.529755, -1.11619],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_1e6f025c45c91d97ac2cae2b0f47ad59.bindTooltip(
+                `<div>
+                     Stop 39<br>Thorne Road/Zetland Road<br>Arrival: 10:11:00<br>Departure: 10:11:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_1e7bc020a23f1e379cc602c9224ca27f = L.polyline(
+                [[53.531147, -1.112736], [53.529755, -1.11619]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_7b797bdcb702f628fbf52ba70a7069e2 = L.marker(
+                [53.528198, -1.118787],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_7b797bdcb702f628fbf52ba70a7069e2.bindTooltip(
+                `<div>
+                     Stop 40<br>Thorne Road/Town Moor Avenue<br>Arrival: 10:12:00<br>Departure: 10:12:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_b558339b64a05858cd15cbb253c44731 = L.polyline(
+                [[53.529755, -1.11619], [53.528198, -1.118787]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_6afe49051a345539de0ed49520058b03 = L.marker(
+                [53.525856, -1.122742],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_6afe49051a345539de0ed49520058b03.bindTooltip(
+                `<div>
+                     Stop 41<br>Thorne Road/Kings Road<br>Arrival: 10:13:00<br>Departure: 10:13:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_70d706593b4bbd5abc4170b1498028f7 = L.polyline(
+                [[53.528198, -1.118787], [53.525856, -1.122742]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_059f47875aa4fa285e6649932ff173f2 = L.marker(
+                [53.521851, -1.131754],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_059f47875aa4fa285e6649932ff173f2.bindTooltip(
+                `<div>
+                     Stop 42<br>Wood Street/Waterdale<br>Arrival: 10:17:00<br>Departure: 10:17:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_babd0f22b134374435a60aea0a8c9ed7 = L.polyline(
+                [[53.525856, -1.122742], [53.521851, -1.131754]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_a0707663e10916e0c5b2ada3a8a306d0 = L.marker(
+                [53.52129, -1.134073],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_a0707663e10916e0c5b2ada3a8a306d0.bindTooltip(
+                `<div>
+                     Stop 43<br>Cleveland Street/Duke Street<br>Arrival: 10:18:00<br>Departure: 10:18:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_3e717e377569d096ec705cf89a310ebb = L.polyline(
+                [[53.521851, -1.131754], [53.52129, -1.134073]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            var marker_e69ece949ef8874cab143b60323ba4ec = L.marker(
+                [53.522995, -1.13879],
+                {}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+    
+            marker_e69ece949ef8874cab143b60323ba4ec.bindTooltip(
+                `<div>
+                     Stop 44<br>Doncaster Frenchgate Interchange/B2<br>Arrival: 10:20:00<br>Departure: 10:20:00
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_045fa0061f5fcbd5a2a381b3d4f94e93 = L.polyline(
+                [[53.52129, -1.134073], [53.522995, -1.13879]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_1826c8b618f93ee58be4f7c1f593186b);
+        
+</script>
+</html>

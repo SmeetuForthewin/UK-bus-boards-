@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trip Viewer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: flex-start;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #leftImage, #rightImage {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #leftImage img, #rightImage img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #content {
+            flex: 2;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        #tripForm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        #tripId {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        #viewButton {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 8px 15px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        #viewButton:hover {
+            background-color: #2980b9;
+        }
+
+        #tripFrame {
+            display: none;
+            width: 100%;
+            height: 800px; /* Increase the height for a larger map */
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="leftImage">
+            <img src="left.jpg" alt="Left Image">
+        </div>
+        <div id="content">
+            <h1>UK Bus Route Explorer</h1>
+            <form id="tripForm">
+                <input type="text" id="tripId" name="tripId" placeholder="Enter Trip ID" required>
+                <button id="viewButton" type="submit">View Trip</button>
+            </form>
+            <iframe id="tripFrame"></iframe>
+        </div>
+        <div id="rightImage">
+            <img src="hi1.jpg" alt="Right Image">
+        </div>
+    </div>
+    <script>
+        document.getElementById("tripForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const tripId = document.getElementById("tripId").value;
+            const tripFrame = document.getElementById("tripFrame");
+            tripFrame.style.display = "block";
+            tripFrame.src = `trips/${tripId}.html`;
+        });
+    </script>
+</body>
+</html>
